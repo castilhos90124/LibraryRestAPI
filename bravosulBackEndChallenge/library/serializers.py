@@ -8,7 +8,7 @@ from library.models import Book, Client
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ['id', 'username','is_staff']
 
 class BookSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -16,6 +16,16 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
         fields = '__all__'
 
 class ClientSerializer(serializers.HyperlinkedModelSerializer):
+    books = BookSerializer(many=True, required=False, read_only=True)
+
     class Meta:
         model = Client
         fields = '__all__'
+
+class ClientBookSerializer(serializers.HyperlinkedModelSerializer):
+    books = BookSerializer(many=True, required=False, read_only=True)
+
+    class Meta:
+        model = Client
+        fields = ['books']
+
