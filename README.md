@@ -44,11 +44,14 @@ pip install markdown
 pip install django-filter
 ```
 
-7. Finally, to create the database file, go to manage location folder and run:
+7. To create the database file, go to manage location folder and run:
 ```
 python .\manage.py migrate
 ```
-
+8. Finally, to create a superuser, run:
+```
+python manage.py createsuperuser
+```
 ### Starting Server
 1. To start your local server, run:
 ```
