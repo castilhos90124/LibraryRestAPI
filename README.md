@@ -1,5 +1,5 @@
 # LibraryRestAPI
-This is the git repository for the library API project!
+This is the git repository for the [Bravosul Backend Challenge](https://github.com/bravosul/back-end-challenge)!
 ##  Development Environment Setup
 
 ### Cloning Project
